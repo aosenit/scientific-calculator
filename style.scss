@@ -18,21 +18,38 @@ body{
 
 
 .calculator{
-    height: 80%;
+    height: 470px;
     width: 320px;
     flex-shrink: 1;
     background-color: rgba($color: #000000, $alpha: .8);
     border-radius: 10px;
+    position: relative;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+}
+
+.calculator::before{
+    content: "Traz";
+    position: absolute;
+    width: 2em;
+    height: 1.2em;
+    color: white;
+    font-size: 1.2em;
+    left: 7%;
+    top: .4em;
+    font-weight: bolder;
 }
 
 .calculator__input{
-    margin: 2em 2em 2em;
+    top: 2em;
+    left: 2em;
     height: 15em;
     display: flex;
     flex-wrap: wrap;
     background-color:#E5E5E5 ;
     border-radius: 10px;
     font-weight: bolder;
+    position: absolute;
+    width: 86%;
    
 
     .special-functions{
@@ -57,11 +74,23 @@ body{
 }
 
 .numberBTN{
-    margin: 2em 2em;
-    height: 58%;
+    position: absolute;
+    height: calc();
     display: flex;
     flex-wrap: wrap;
     border: 3px solid rgba($color: #000000, $alpha: .1);
+    box-sizing: border-box;
+    bottom: 2em;
+    left: 2em;
+  
+
+    .special-btn{
+        flex-shrink: 1;
+    }
+
+    .calculator__btn{
+        flex-shrink: 1;
+    }
 }
 
 button{
@@ -84,3 +113,4 @@ button:hover{
 .red{
     color: red;
 }
+

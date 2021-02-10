@@ -25,16 +25,32 @@ body {
 }
 
 .calculator {
-  height: 80%;
+  height: 470px;
   width: 320px;
   -ms-flex-negative: 1;
       flex-shrink: 1;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
+  position: relative;
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.calculator::before {
+  content: "Traz";
+  position: absolute;
+  width: 2em;
+  height: 1.2em;
+  color: white;
+  font-size: 1.2em;
+  left: 7%;
+  top: .4em;
+  font-weight: bolder;
 }
 
 .calculator__input {
-  margin: 2em 2em 2em;
+  top: 2em;
+  left: 2em;
   height: 15em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,6 +60,8 @@ body {
   background-color: #E5E5E5;
   border-radius: 10px;
   font-weight: bolder;
+  position: absolute;
+  width: 86%;
 }
 
 .calculator__input .special-functions {
@@ -67,14 +85,28 @@ body {
 }
 
 .numberBTN {
-  margin: 2em 2em;
-  height: 58%;
+  position: absolute;
+  height: calc();
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border: 3px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  bottom: 2em;
+  left: 2em;
+}
+
+.numberBTN .special-btn {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.numberBTN .calculator__btn {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
 button {
