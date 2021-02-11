@@ -21,11 +21,9 @@ const answer = document.querySelector('#answer');
 
 
 
-On.addEventListener('click', () => {
+On.addEventListener('click', (e) => {
    answerDisplay.innerText = '0';
-   inputDisplay.innerText = ""
-    SpecialOutput.innerText = ""
-   
+   On.disabled = true;
 operators.forEach(operator => {
     operator.addEventListener('click', () => {
         inputDisplay.innerText += operator.innerText;  
@@ -49,7 +47,7 @@ Delete.addEventListener('click', () => {
 
 Clear.addEventListener('click', () => {
     inputDisplay.innerText = ""
-    answerDisplay.innerText = ""
+    answerDisplay.innerText = "0"
     SpecialOutput.innerText = ""
 })
 
@@ -95,4 +93,13 @@ answer.addEventListener('click', () => {
    
     inputDisplay.innerText = answerDisplay.innerText
 })
+
+
+log.addEventListener('click', () => {
+    answerDisplay.innerText = Math.log10(inputDisplay.innerText);
+    SpecialOutput.innerText = "log"
 })
+ 
+
+})
+

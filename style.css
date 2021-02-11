@@ -71,9 +71,15 @@ body {
 }
 
 .calculator__input .inputedText {
-  width: 70%;
+  width: 11em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 1.7em;
   padding: .2em 1em 0;
+  overflow: hidden;
 }
 
 .calculator__input .answerText {
